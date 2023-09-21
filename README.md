@@ -13,4 +13,4 @@ export default {
 
 `BOT_USERNAME` is the username of the Twitch account that will be authenticated with. To get the `BOT_TOKEN`, make sure you are signed into the `BOT_USERNAME` account and go to [https://twitchapps.com/tmi/](). `CHANNEL_NAME` is the name of the user whose chat will be scanned.
 
-Then, it's simply `npm run dev` to run the application.
+Then, it's simply `npm install` and `npm run dev` to run the application.
