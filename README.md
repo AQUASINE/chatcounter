@@ -1,7 +1,16 @@
-# Vue 3 + Vite
+# chatcounter
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This is a simple Vue application that uses the Twitch API to pick out the most frequently said words/phrases in chat (up to 3 words long). This is intended for use as an OBS Browser Source. Refreshing the page clears data and restarts tracking.
 
-## Recommended IDE Setup
+Before running, place your bot/channel information in the `config.js` file in the root directory, replacing the default info:
+```js
+export default {
+  "BOT_USERNAME": "botusername",
+  "BOT_TOKEN": "oauth:xxxxxxxxxxxxx",
+  "CHANNEL_NAME": "channelname"
+}
+```
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+`BOT_USERNAME` is the username of the Twitch account that will be authenticated with. To get the `BOT_TOKEN`, make sure you are signed into the `BOT_USERNAME` account and go to [https://twitchapps.com/tmi/](). `CHANNEL_NAME` is the name of the user whose chat will be scanned.
+
+Then, it's simply `npm run dev` to run the application.
